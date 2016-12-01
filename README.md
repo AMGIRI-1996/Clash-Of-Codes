@@ -42,6 +42,9 @@ Your work:---
     
     thats it. A sample moniter.cpp is provided in codes folder for the cage game.
     
+    Its always better to give a random bot for your game.
+    that will play randomly and now user just need to focus on algorithm or ligic to be implemented.
+    
 After making this program replace moniter.cpp with your moniter.cpp 
 whenever some user will enter code his/her file will be generated automatically.
 
