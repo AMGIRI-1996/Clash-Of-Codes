@@ -1,0 +1,99 @@
+﻿Clash of codes
+
+game : CAGE
+
+game rules:
+1.In this event we will be playing Islon on 5x5 board.
+
+Cage is a 2-player game where each player is assigned with a color(we will be assigning red to player 1 and black to player 2). 
+In each turn a player has to
+a. Choose a square(with corresponding row and column coordinates) at which he/she want to move.
+
+b. Choose a square(with corresponding row and column coordinates) where he/she want to put a cross.
+
+what is player and cross??
+player- Each participant is a player, you have to maximize the possible moves available to you while limiting your opponent's possible moves using cross.
+Cross- A cross is a way to limit your opponent's possible moves. Once a cross has been set onto a square, players can't move on that square.
+
+Note: A player loses if he/she has no place to move.
+
+Rules for choosing square for your move:
+
+ Each player can only choose square which is empty(not crossed or occupied by opponen) and is first neighbour of the square at which you are currently present. A player can have maximum of 8 neighbour:- left,right,top,bottom,diagnal left-top,diagonal left-bottom,diagonal right-top and diagonal right-bottom. A player can't choose his current position as next position i.e he/she have to move from his/her current position.
+
+
+Rules for choosing squares for cross:
+
+Each player can only choose square which is empty(not crossed or occupied by opponent).
+
+**Breaking of these rules will straightforward lead to disqualification.
+
+
+How to play:
+
+Player's code will run and input will be passed to it.
+
+first 5 lines will contain 5 space-separated digits depicting the current state of gameboard.(more about this in board notation).
+
+Next line will contain playercode (either 1 or 2). player who starts the game will be assigned 1 and second player will be assigned 2. 
+
+Player need to store these values in an array, compute on it and output the coordinates of the box where you want to move your playe and coordinates of the box where you want to place cross.
+
+
+How to win:
+
+The only way to win this game is by smartly moving your playe and placing crossess in such a way that your opponent has no where to move. In other words you have to restrict your opponent by surrounding him/her.
+
+Our OnlineJudge:
+1. OnlineJudge will only run code file in .c format. That means code must be written in C language only.
+2. Player who choose to start game by choosing a opponent will be player 1 and will get the first chance to play.
+**3. Our OnlineJudge will run player's program for each input. Player don't have to use loops for taking input again and again as each time a input is given a fresh instance of your  program will be started.
+
+
+Time limit: 1sec
+Time limit for each turn will be 1 sec failing which player will be disqualified and opponent will win the game.
+
+Space limit: 5mb
+Your code must not utilize more than 5 mb failing which player will be disqualified and opponent will win the game.
+
+
+Color assigned:
+Player 1 will be assigned red color and player 2 will be assigned black color.
+
+ Board Notation:
+ In a 5x5 board, row coordinate starts with 0 and increase as we go from to top to bottom.
+ Column coordinate starts with 0 and increase as we go  from left to right.
+ So the left-top coordinate will be 0,0 and the bottom-right coordinate will be 4,4.
+
+Values passed in array as input may contain following values:
+
+0: It shows square is empty and can be occupied.
+1:It shows square is occupied by first player's striker. 
+2:It shows square is occupied by second player's striker. 
+-1:It shows square has been crossed and can't be used.
+
+
+Input
+
+0   0  -1   0   0
+1   0   0   0   0
+0   0   0  -1   0
+0   0   2   0   0
+0   0   0   0   0
+1
+This shows that player 1's striker is present at  square(1,0). Player 2's striker is present at  square(3,2) and square(0,2) and square(2,3) has been crossed.
+
+Output:
+2 1 2 2
+
+first two integers shows  coordinates of  player 1's new position and last two integers shows coordinates of square where player put a cross. so the new input for player 2 will be:
+
+
+0   0  -1   0   0
+0   0   0   0   0
+0   1  -1  -1   0
+0   0   2   0   0
+0   0   0   0   0
+2
+
+
